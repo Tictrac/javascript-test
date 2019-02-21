@@ -54,7 +54,7 @@ describe('Search Function', () => {
 		assert.strictEqual(results[0].id, 5, 'The correct id exists');
 	});
 	
-	it(`Can find all users who's name matches the regular expression`, () => {
+	it(`Will handle regular expressions as values`, () => {
 		const results = search(appData, {
 			"name": /J/i
 		});
@@ -64,7 +64,7 @@ describe('Search Function', () => {
 		assert.strictEqual(results[1].id, 2, 'The correct id exists');
 	});
 	
-	it(`Can find users by specifying a path to some deep object data`, () => {
+	it(`Will handle dot notation in paths correctly`, () => {
 		const results = search(appData, {
 			"settings.live": true
 		});
@@ -75,7 +75,7 @@ describe('Search Function', () => {
 		assert.strictEqual(results[2].id, 4, 'The correct id exists');
 	});
 	
-	it(`Can find users by specifying a path to some deep object data`, () => {
+	it(`Will handle dot notation in paths correctly`, () => {
 		const results = search(appData, {
 			"settings.live": false
 		});
@@ -85,11 +85,18 @@ describe('Search Function', () => {
 		assert.strictEqual(results[1].id, 5, 'The correct id exists');
 	});
 	
-	it(`Can find users by specifying a path to some deep object data`, () => {
+	it(`Will handle multiple search paths as a logical AND in the query object`, () => {
 		const results = search(appData, {
 			"settings.live": false,
 			"age": 12
 		});
+		
+		assert.strictEqual(results.length, 1, 'The results have the correct length');
+		assert.strictEqual(results[0].id, 4, 'The correct id exists');
+	});
+	
+	it(`Will return all results when a blank query object is specified`, () => {
+		const results = search(appData, {});
 		
 		assert.strictEqual(results.length, 1, 'The results have the correct length');
 		assert.strictEqual(results[0].id, 4, 'The correct id exists');

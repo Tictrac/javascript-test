@@ -1,10 +1,10 @@
 {
   "name": "tictrac-test",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./tests/**.js"
+    "test": "mocha ./**/*.test.js"
   },
   "author": "",
   "license": "ISC",

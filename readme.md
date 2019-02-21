@@ -5,9 +5,10 @@ npm i
 ```
 
 ## Requirements
-> At any time if you are stuck, need clarification or want further input please don't hesitate to ask. The best developers we work with are people who know how to communicate :)
-
-> If you need to google anything while doing this test project, please feel free. It certainly will not count against you. No one can remember everything!
+> 1. At any time if you are stuck, need clarification or want further input please don't hesitate to ask. The best developers we work with are people who know how to communicate :)
+> 2. If you need to google anything while doing this test project, please feel free. It certainly will not count against you. No one can remember everything!
+> 3. Use all the tools available to you such as IDEs and debuggers as required.
+> 4. Please write clean code that does not rely on any third party libraries or frameworks. They are not required and we want to see how you solve the problem without using other existing code.
 
 The idea of this test project is to determine your skill level as a JavaScript developer. The project
 consists of some mocha tests that have already been written and your final code must comply with.
