@@ -84,4 +84,14 @@ describe('Search Function', () => {
 		assert.strictEqual(results[0].id, 3, 'The correct id exists');
 		assert.strictEqual(results[1].id, 5, 'The correct id exists');
 	});
+	
+	it(`Can find users by specifying a path to some deep object data`, () => {
+		const results = search(appData, {
+			"settings.live": false,
+			"age": 12
+		});
+		
+		assert.strictEqual(results.length, 1, 'The results have the correct length');
+		assert.strictEqual(results[0].id, 4, 'The correct id exists');
+	});
 });
