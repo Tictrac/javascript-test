@@ -12,7 +12,7 @@ npm i
 The idea of this test project is to determine your skill level as a JavaScript developer. The project
 consists of some mocha tests that have already been written and your final code must comply with.
 
-The task is to write an object search function that can take an array of data objects, a search object and the
+The task is to write an object search function that can take an array of data objects, a search object and then
 return an array of results.
 
 Search objects are written in Mongo query language. For instance, given this example data object:
