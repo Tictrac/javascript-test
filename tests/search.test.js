@@ -87,7 +87,7 @@ describe('Search Function', () => {
 	
 	it(`Will handle multiple search paths as a logical AND in the query object`, () => {
 		const results = search(appData, {
-			"settings.live": false,
+			"settings.live": true,
 			"age": 12
 		});
 		
@@ -98,7 +98,7 @@ describe('Search Function', () => {
 	it(`Will return all results when a blank query object is specified`, () => {
 		const results = search(appData, {});
 		
-		assert.strictEqual(results.length, 1, 'The results have the correct length');
+		assert.strictEqual(results.length, 5, 'The results have the correct length');
 		assert.strictEqual(results[0].id, 4, 'The correct id exists');
 	});
 });
